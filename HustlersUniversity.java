@@ -224,17 +224,6 @@ public class HustlersUniversity extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-      int delay = 1000; //milliseconds
-      HustlersUniversity code = new HustlersUniversity();
-      ActionListener taskPerformer;
-        taskPerformer = new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                String date = new java.text.SimpleDateFormat("HH:mm:ss").format(new java.util.Date(System.currentTimeMillis()));
-                money.setMoney(date);
-                System.out.println("code");
-            }
-        };
-      new Timer(delay, taskPerformer).start();
 
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
