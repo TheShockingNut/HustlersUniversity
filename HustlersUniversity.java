@@ -4,11 +4,9 @@
  */
 package hustlersuniversity;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JLabel;
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.JOptionPane;
-import javax.swing.Timer;
 
 /**
  *
@@ -176,15 +174,63 @@ public class HustlersUniversity extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    int increment = 10;
     int moneyMade = 0;
     int priceBugatti = 100;
     int bugattis = 0;
     int priceKids = 100;
     int kids = 0;
+
+    public int getIncrement() {
+        return increment;
+    }
+
+    public void setIncrement(int increment) {
+        this.increment = increment;
+    }
+
+    public int getMoneyMade() {
+        return moneyMade;
+    }
+
+    public void setMoneyMade(int moneyMade) {
+        this.moneyMade = moneyMade;
+    }
+
+    public int getPriceBugatti() {
+        return priceBugatti;
+    }
+
+    public void setPriceBugatti(int priceBugatti) {
+        this.priceBugatti = priceBugatti;
+    }
+
+    public int getBugattis() {
+        return bugattis;
+    }
+
+    public void setBugattis(int bugattis) {
+        this.bugattis = bugattis;
+    }
+
+    public int getPriceKids() {
+        return priceKids;
+    }
+
+    public void setPriceKids(int priceKids) {
+        this.priceKids = priceKids;
+    }
+
+    public int getKids() {
+        return kids;
+    }
+
+    public void setKids(int kids) {
+        this.kids = kids;
+    }
     private void makeMoneyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_makeMoneyActionPerformed
         // TODO add your handling code here:
-        moneyMade += 10;
+        moneyMade += increment;
         money.setText(moneyMade + " ");
     }//GEN-LAST:event_makeMoneyActionPerformed
 
@@ -224,7 +270,16 @@ public class HustlersUniversity extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-
+        HustlersUniversity hu = new HustlersUniversity();
+        
+        Timer t = new Timer();
+        t.schedule(new TimerTask() {
+            @Override
+            public void run() {
+               hu.setMoneyMade(hu.getMoneyMade()+hu.getKids()*5);
+               hu.money.setText(hu.getMoneyMade()+" ");
+            }
+        }, 0, 1000/(hu.getBugattis()+1));
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -251,7 +306,7 @@ public class HustlersUniversity extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HustlersUniversity().setVisible(true);
+                hu.setVisible(true);
             }
         });
     }
