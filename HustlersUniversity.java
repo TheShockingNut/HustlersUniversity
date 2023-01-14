@@ -46,6 +46,9 @@ public class HustlersUniversity extends javax.swing.JFrame {
         kidsLabel = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         kidPrice = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        speed = new javax.swing.JLabel();
+        Cheat = new javax.swing.JButton();
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hustlersuniversity/ezgif.com-gif-maker.jpeg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -97,54 +100,78 @@ public class HustlersUniversity extends javax.swing.JFrame {
 
         kidPrice.setText("100");
 
+        jLabel7.setText("Speed:");
+
+        speed.setText("1000");
+
+        Cheat.setText("Add Bugatti");
+        Cheat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheatActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(260, 274, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(994, 994, 994))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(makeMoney)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(money, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bugatiiPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bugattiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton2)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(speed))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel8)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(kidPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jButton2)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel8)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(kidPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(kys)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(kidsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Cheat))
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(kys)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(kidsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel6))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(makeMoney)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(money, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(33, 33, 33)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jButton1)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(bugatiiPrice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(bugattiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(798, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel6)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel7)
+                        .addComponent(speed)))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -168,7 +195,9 @@ public class HustlersUniversity extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(kidPrice))
                 .addGap(25, 25, 25)
-                .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(Cheat))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -177,7 +206,7 @@ public class HustlersUniversity extends javax.swing.JFrame {
     int increment = 10;
     int moneyMade = 0;
     int priceBugatti = 100;
-    int bugattis = 0;
+    int bugattis = 1;
     int priceKids = 100;
     int kids = 0;
 
@@ -239,10 +268,11 @@ public class HustlersUniversity extends javax.swing.JFrame {
         if (moneyMade >= priceBugatti) {
             bugattis++;
             moneyMade -= priceBugatti;
-            priceBugatti *= 1.3;
+            priceBugatti *= 1.8;
             bugattiLabel.setText(bugattis + " ");
             bugatiiPrice.setText(priceBugatti + " ");
             money.setText(moneyMade + " ");
+            speed.setText(Math.ceil(1000 / Math.pow(2, bugattis * 0.001)) + " ");
         } else {
             JOptionPane.showMessageDialog(null, "BROKIEEEE!!!!");
         }
@@ -257,7 +287,7 @@ public class HustlersUniversity extends javax.swing.JFrame {
         if (moneyMade >= priceKids) {
             kids++;
             moneyMade -= priceKids;
-            priceKids *= 1.3;
+            priceKids *= 1.5;
             kidsLabel.setText(kids + " ");
             kidPrice.setText(priceKids + " ");
             money.setText(moneyMade + " ");
@@ -266,20 +296,44 @@ public class HustlersUniversity extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void CheatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheatActionPerformed
+        // TODO add your handling code here:
+        setBugattis(getBugattis() + 100);
+        System.out.println(bugattis);
+        bugattiLabel.setText(getBugattis() + " ");
+        speed.setText(Math.ceil(1000 / Math.pow(2, getBugattis() * 0.001)) + " ");
+    }//GEN-LAST:event_CheatActionPerformed
+
+    
+    int period = (int) Math.ceil(1000 / Math.pow(2, getBugattis() * 0.001));
+
+    private void startTimer() {
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                // do something...
+                System.out.println("period = " + period);
+                setMoneyMade(getMoneyMade() + getKids() * 100);
+                money.setText(getMoneyMade() + " ");
+                if (period != (int) Math.ceil(1000 / Math.pow(2, getBugattis() * 0.001))) {
+                    period = (int) Math.ceil(1000 / Math.pow(2, getBugattis() * 0.001));   // change the period time
+                    timer.cancel(); // cancel time
+                    startTimer();
+                }
+
+                // start the time again with a new period time
+            }
+        }, 0, period);
+
+    }
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         HustlersUniversity hu = new HustlersUniversity();
-        
-        Timer t = new Timer();
-        t.schedule(new TimerTask() {
-            @Override
-            public void run() {
-               hu.setMoneyMade(hu.getMoneyMade()+hu.getKids()*5);
-               hu.money.setText(hu.getMoneyMade()+" ");
-            }
-        }, 0, 1000/(hu.getBugattis()+1));
+        hu.startTimer();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -305,6 +359,7 @@ public class HustlersUniversity extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 hu.setVisible(true);
             }
@@ -312,6 +367,7 @@ public class HustlersUniversity extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cheat;
     private javax.swing.JLabel bugatiiPrice;
     private javax.swing.JLabel bugattiLabel;
     private javax.swing.JButton jButton1;
@@ -322,11 +378,13 @@ public class HustlersUniversity extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel kidPrice;
     private javax.swing.JLabel kidsLabel;
     private javax.swing.JLabel kys;
     private javax.swing.JButton makeMoney;
     private javax.swing.JLabel money;
+    private javax.swing.JLabel speed;
     // End of variables declaration//GEN-END:variables
 }
